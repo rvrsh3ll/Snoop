@@ -193,7 +193,7 @@ def check_twitter_profile(username, display_url):
     }
     
     try:
-        url = f"https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names={username}"
+        url = f"https://publish.x.com/oembed?url={username}"
         res = requests.get(url, headers=headers, timeout=5)
         if res.status_code == 200:
             data = res.json()
